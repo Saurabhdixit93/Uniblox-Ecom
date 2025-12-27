@@ -1,0 +1,374 @@
+/**
+ * Cart Page Styles
+ */
+
+.page {
+  padding: 40px 0 80px;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--text-secondary);
+}
+
+/* Empty State */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+  color: var(--text-tertiary);
+  background: var(--bg-secondary);
+  border-radius: 50%;
+}
+
+.empty h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.empty p {
+  color: var(--text-secondary);
+}
+
+.shopButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 14px 28px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: white;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.shopButton:hover {
+  transform: translateY(-2px);
+}
+
+/* Header */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: var(--text-secondary);
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Items */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.itemImage {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.itemDetails {
+  min-width: 0;
+}
+
+.itemName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color var(--transition-fast);
+}
+
+.itemName:hover {
+  color: var(--primary);
+}
+
+.itemPrice {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Quantity Controls */
+.itemQuantity {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.quantityButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.quantityButton:hover:not(:disabled) {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.quantityButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantityValue {
+  min-width: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.itemTotal {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.removeButton {
+  padding: 8px;
+  color: var(--text-tertiary);
+  transition: color var(--transition-fast);
+}
+
+.removeButton:hover {
+  color: var(--error);
+}
+
+/* Summary */
+.summary {
+  position: sticky;
+  top: 120px;
+  padding: 32px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  height: fit-content;
+}
+
+.summaryTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Discount */
+.discountSection {
+  margin-bottom: 24px;
+}
+
+.discountInput {
+  display: flex;
+  gap: 8px;
+}
+
+.discountField {
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.discountField::placeholder {
+  text-transform: none;
+  color: var(--text-tertiary);
+}
+
+.discountField:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.applyButton {
+  padding: 0 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.applyButton:hover {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+.appliedDiscount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--success);
+  border-radius: var(--radius-sm);
+}
+
+.discountInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.discountPercent {
+  font-weight: 600;
+}
+
+.removeDiscountButton {
+  padding: 4px;
+  color: var(--success);
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.removeDiscountButton:hover {
+  opacity: 1;
+}
+
+/* Totals */
+.totals {
+  margin-bottom: 24px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.totalRow.discount {
+  color: var(--success);
+}
+
+.freeShipping {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.totalRow.grandTotal {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.continueShopping {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.continueShopping:hover {
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    grid-template-columns: 80px 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 12px;
+  }
+
+  .itemImage {
+    width: 80px;
+    height: 80px;
+    grid-row: 1 / 3;
+  }
+
+  .itemQuantity {
+    grid-column: 2;
+  }
+
+  .itemTotal {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .removeButton {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+
+  .summary {
+    position: static;
+  }
+}

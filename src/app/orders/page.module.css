@@ -1,0 +1,124 @@
+/**
+ * Orders Page Styles
+ */
+
+.page {
+  padding: 40px 0 80px;
+  min-height: calc(100vh - var(--header-height));
+}
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--text-secondary);
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 24px;
+  text-align: center;
+  color: var(--text-tertiary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+.shopLink {
+  margin-top: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: white;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-md);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.orderCard {
+  padding: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.orderNumber {
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: block;
+}
+.orderDate {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+.status {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: var(--radius-full);
+}
+.status.pending {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+.status.processing {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+.status.completed,
+.status.delivered {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.orderItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.item {
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+.more {
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+
+.orderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+.discount {
+  font-size: 0.875rem;
+  color: var(--success);
+}
+.total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
